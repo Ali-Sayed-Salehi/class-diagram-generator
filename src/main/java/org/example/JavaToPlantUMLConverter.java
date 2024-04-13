@@ -5,12 +5,17 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class JavaToPlantUMLConverter {
     private final List<Element> elements = new ArrayList<>();
+
+    public List<Element> getElements() {
+        return elements;
+    }
 
     public void parseJavaFiles(String directoryPath) {
         File directory = new File(directoryPath);
