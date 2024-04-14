@@ -34,7 +34,8 @@ public class JavaToPlantUMLConverter {
             StringBuilder classContent = new StringBuilder();
             boolean insideClass = false;
             while ((line = br.readLine()) != null) {
-                if (line.contains("class") || line.contains("interface")) {
+                //TODO: use regex instead of string-matching for the following statement
+                if (line.contains("class ") || line.contains("interface ")) {
                     insideClass = true;
                     classContent.append(line).append("\n");
                 } else if (insideClass) {
@@ -52,7 +53,7 @@ public class JavaToPlantUMLConverter {
         }
     }
 
-    private Element createJavaElement(String classContent) {
+    Element createJavaElement(String classContent) {
         // Extract class or interface name
         Pattern pattern = Pattern.compile("(class|interface)\\s+(\\w+)");
         Matcher matcher = pattern.matcher(classContent);
@@ -63,7 +64,7 @@ public class JavaToPlantUMLConverter {
         String elementName = matcher.group(2);
 
         // Extract fields and methods
-        List<String> fields = new ArrayList<>();
+        /*List<String> fields = new ArrayList<>();
         List<String> methods = new ArrayList<>();
         pattern = Pattern.compile("(private|protected|public)\\s+(\\w+\\s+)*(\\w+)(\\(.*?\\))");
         matcher = pattern.matcher(classContent);
@@ -77,18 +78,18 @@ public class JavaToPlantUMLConverter {
             } else {
                 methods.add(returnType + methodName + params);
             }
-        }
+        }*/
 
         if (elementType.equals("class")) {
             ClassElement classElement = new ClassElement();
             classElement.setClassName(elementName);
-            classElement.setFields(fields);
-            classElement.setMethods(methods);
+            /*classElement.setFields(fields);
+            classElement.setMethods(methods);*/
             return classElement;
         } else {
             InterfaceElement interfaceElement = new InterfaceElement();
             interfaceElement.setInterfaceName(elementName);
-            interfaceElement.setMethods(methods);
+            //interfaceElement.setMethods(methods);
             return interfaceElement;
         }
     }
