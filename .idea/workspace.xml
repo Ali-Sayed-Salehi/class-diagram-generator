@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7419a721-936e-40a3-b6bc-13c9b56fa6f5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/JavaToPlantUMLConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/JavaToPlantUMLConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/JavaToPlantUMLConverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/JavaToPlantUMLConverterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +57,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
-    "JUnit.JavaToPlantUMLConverterTest.executor": "Run",
+    "JUnit.JavaToPlantUMLConverterTest.executor": "Debug",
+    "JUnit.JavaToPlantUMLConverterTest.testGeneratePlantUML.executor": "Run",
+    "JUnit.JavaToPlantUMLConverterTest.testParseJavaFile.executor": "Run",
+    "JUnit.JavaToPlantUMLConverterTest.testParseJavaFiles.executor": "Run",
     "JUnit.PlantUMLVisitorTest.executor": "Run",
+    "JUnit.PlantUMLVisitorTest.testVisitInterfaceElement.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "test",
@@ -68,6 +72,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -76,7 +81,20 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JavaToPlantUMLConverterTest">
+  <component name="RunManager" selected="JUnit.JavaToPlantUMLConverterTest.testParseJavaFiles">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="class-diagram-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JavaToPlantUMLConverterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="class-diagram-generator" />
       <extension name="coverage">
@@ -92,7 +110,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlantUMLVisitorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JavaToPlantUMLConverterTest.testGeneratePlantUML" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="class-diagram-generator" />
       <extension name="coverage">
         <pattern>
@@ -101,16 +119,52 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.PlantUMLVisitorTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="org.example.JavaToPlantUMLConverterTest" />
+      <option name="METHOD_NAME" value="testGeneratePlantUML" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JavaToPlantUMLConverterTest.testParseJavaFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="class-diagram-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.JavaToPlantUMLConverterTest" />
+      <option name="METHOD_NAME" value="testParseJavaFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JavaToPlantUMLConverterTest.testParseJavaFiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="class-diagram-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.JavaToPlantUMLConverterTest" />
+      <option name="METHOD_NAME" value="testParseJavaFiles(java.nio.file.Path)" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JavaToPlantUMLConverterTest.testParseJavaFiles" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.JavaToPlantUMLConverterTest" />
-        <item itemvalue="JUnit.PlantUMLVisitorTest" />
+        <item itemvalue="JUnit.JavaToPlantUMLConverterTest.testGeneratePlantUML" />
+        <item itemvalue="JUnit.JavaToPlantUMLConverterTest.testParseJavaFile" />
       </list>
     </recent_temporary>
   </component>
@@ -129,7 +183,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1713047387690</updated>
-      <workItem from="1713047388756" duration="3914000" />
+      <workItem from="1713047388756" duration="11071000" />
     </task>
     <servers />
   </component>
