@@ -45,10 +45,29 @@ public class JavaToPlantUMLConverterTest {
     }
 
     @Test
-    void testParseJavaFile() {
-        converter.parseJavaFile(
-                "C:\\Users\\alals\\repos\\class-diagram-generator\\src\\main\\java\\org\\example\\ClassElement.java");
-        assertEquals(1, converter.getElements().size());
+    void testParseJavaFile() throws IOException {
+        // Create a temporary Java file with a class and an interface
+        File tempFile = File.createTempFile("TestFile", ".java");
+        try (FileWriter writer = new FileWriter(tempFile)) {
+            writer.write("public class TestClass {\n" +
+                    "    private int id;\n" +
+                    "    private String name;\n" +
+                    "}\n\n" +
+                    "interface TestInterface {\n" +
+                    "    void doSomething();\n" +
+                    "}");
+        }
+
+        // Parse the Java file
+        JavaToPlantUMLConverter converter = new JavaToPlantUMLConverter();
+        converter.parseJavaFile(tempFile.getAbsolutePath());
+
+        // Assert that the correct elements are added to the elements list
+        assertEquals(2, converter.getElements().size());
+        assertEquals(ClassElement.class, converter.getElements().get(0).getClass());
+        assertEquals("TestClass", ((ClassElement) converter.getElements().get(0)).getClassName());
+        assertEquals(InterfaceElement.class, converter.getElements().get(1).getClass());
+        assertEquals("TestInterface", ((InterfaceElement) converter.getElements().get(1)).getInterfaceName());
     }
 
     @Test
